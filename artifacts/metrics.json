@@ -1,0 +1,73 @@
+{
+  "dataset": {
+    "rows": 70814,
+    "positive_rate": 0.004434151438980992,
+    "train_rows": 49570,
+    "test_rows": 21244
+  },
+  "model_comparison": {
+    "logistic_regression": {
+      "pr_auc": 0.32279839709444264,
+      "roc_auc": 0.9865427446171742,
+      "recall_at_1pct_budget": 0.6666666666666666,
+      "precision_at_1pct_budget": 0.29245283018867924
+    },
+    "random_forest": {
+      "pr_auc": 0.8285446211234484,
+      "roc_auc": 0.9987885369053955,
+      "recall_at_1pct_budget": 0.978494623655914,
+      "precision_at_1pct_budget": 0.42924528301886794
+    },
+    "gradient_boosting": {
+      "pr_auc": 0.8375978862516402,
+      "roc_auc": 0.9975208981196649,
+      "recall_at_1pct_budget": 0.8924731182795699,
+      "precision_at_1pct_budget": 0.3915094339622642
+    }
+  },
+  "selected_model": "random_forest",
+  "selection_criterion": "recall_at_1pct_budget, pr_auc as tiebreak",
+  "decision_threshold": 0.12523655548464105,
+  "threshold_operating_point": {
+    "precision": 0.5,
+    "recall": 0.946236559139785
+  },
+  "confusion_matrix": {
+    "tn": 21063,
+    "fp": 88,
+    "fn": 5,
+    "tp": 88
+  },
+  "alert_rate": 0.008284692148371305,
+  "per_typology_recall": {
+    "cnp_fraud": {
+      "n": 63,
+      "recall": 0.9682539682539683
+    },
+    "mule": {
+      "n": 11,
+      "recall": 0.9090909090909091
+    },
+    "structuring": {
+      "n": 19,
+      "recall": 0.8947368421052632
+    }
+  },
+  "top_features": {
+    "num__amount_ratio_to_cust_median": 0.15391288143904286,
+    "num__amount": 0.11236496440961889,
+    "num__pct_of_reporting_limit": 0.09784790991959069,
+    "num__log_amount": 0.09149438067702091,
+    "num__seconds_since_prev_txn": 0.07376506007640847,
+    "cat__channel_CARD_ONLINE": 0.07232027310330807,
+    "num__amount_zscore_cust": 0.06016612556241257,
+    "num__amount_sum_24h": 0.03735778790383717,
+    "num__is_new_beneficiary": 0.03666248577915169,
+    "num__txn_count_24h": 0.03278652276349564,
+    "num__amount_sum_7d": 0.03136116555448806,
+    "cat__channel_UPI": 0.02561231177249579,
+    "num__is_foreign_country": 0.02228860119232902,
+    "num__txn_count_1h": 0.019358827736073586,
+    "num__txn_count_7d": 0.014675850271988766
+  }
+}
