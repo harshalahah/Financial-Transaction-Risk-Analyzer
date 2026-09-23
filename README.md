@@ -73,6 +73,5 @@ curl -X POST localhost:8000/score -H 'Content-Type: application/json' -d '{
 }
 ```
 
-New to this? Read `START_HERE.md` first — plain-English explanation, a 10-day
-study plan and resume wording. See `DOCUMENTATION.md` for the full design rationale, feature dictionary,
-evaluation methodology, API reference and interview talking points.
+See `DOCUMENTATION.md` for the full design rationale, feature dictionary,
+evaluation methodology and API reference.
